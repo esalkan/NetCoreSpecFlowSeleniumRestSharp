@@ -26,4 +26,8 @@
     <None Remove="SpecFlow.Tools.MsBuild.Generation" />
     <None Remove="SpecFlow.Assist.Dynamic" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="com\meDirect\pages" />
+  </ItemGroup>
 </Project>
