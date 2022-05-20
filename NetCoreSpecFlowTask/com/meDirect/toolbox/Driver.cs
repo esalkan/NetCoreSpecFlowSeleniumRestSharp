@@ -1,9 +1,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Edge;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.IE;
-using OpenQA.Selenium.Safari;
+using WebDriverManager;
+using WebDriverManager.DriverConfigs.Impl;
 
 namespace NetCoreSpecFlowTask.com.meDirect.toolbox
 {
@@ -26,6 +24,7 @@ namespace NetCoreSpecFlowTask.com.meDirect.toolbox
                 switch (browserType) {
                     // Chrome browser WebDriver setup for Chrome browser.
                     case "chrome":
+                        new DriverManager().SetUpDriver(new ChromeConfig());
                         driver = new ChromeDriver(); // Chrome driver initialization.
                         break;
                 }
