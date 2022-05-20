@@ -29,7 +29,6 @@ Feature: Login Feature
 
 	####################################################################################################################
   
-	@wip
 	Scenario: Login feature with locked out user credentials
 		When enter <UserName> and <Password> credentials
 		And click on login button
@@ -40,4 +39,22 @@ Feature: Login Feature
 	
 	####################################################################################################################
 
+	Scenario: Login feature with valid username and empty password credentials
+		When enter <UserName> and <Password> credentials
+		And click on login button
+		Then user should see "Epic sadface: Password is required" error message
+		Examples: 
+		  | UserName                | Password |
+		  | standard_user           |          |
+		  | problem_user            |          |
+		  | performance_glitch_user |          |
+    
+	####################################################################################################################
 
+	Scenario: Login feature with empty username and valid password
+		When enter <UserName> and <Password> credentials
+		And click on login button
+		Then user should see "Epic sadface: Username is required" error message
+		Examples: 
+		  | UserName | Password     |
+		  |          | sauce_secret |

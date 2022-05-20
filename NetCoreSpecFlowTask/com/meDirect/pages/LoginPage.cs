@@ -3,18 +3,10 @@ using OpenQA.Selenium;
 
 namespace NetCoreSpecFlowTask.com.meDirect.pages
 {
+    // This class is used to define the elements on the page
     public class LoginPage : BasePage
     {
-        /*
-        public IWebDriver WebDriver { get; }
-
-        public LoginPage(IWebDriver webDriver)
-        {
-            WebDriver = webDriver;
-        }
-        */
-        
-        // UI Web Elements Locators
+        // WebElements are defined here and used in the methods below
         public IWebElement inputUserName => Driver.getDriver().FindElement(By.XPath("//input[@id='user-name']"));
         public IWebElement inputPassword => Driver.getDriver().FindElement(By.XPath("//input[@id='password']"));
         public IWebElement loginButton => Driver.getDriver().FindElement(By.XPath("//input[@id='login-button']"));
@@ -27,12 +19,13 @@ namespace NetCoreSpecFlowTask.com.meDirect.pages
             inputPassword.SendKeys(userPassword);
         } 
         
-        // Login button
+        // Clicking on the login button
         public void ClickOnLoginBtn()
         {
-            loginButton.Click();
+            loginButton.Click(); // Click on login button
         }
-
+        
+        // Getting the error message text
         public string GetWrongCredentialErrorMessage()
         {
             return wrongCredentialsErrorMessage.Text;

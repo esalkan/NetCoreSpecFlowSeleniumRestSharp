@@ -15,8 +15,6 @@ Scenario: User should be able logout
 	  | problem_user            | secret_sauce |
 	  | performance_glitch_user | secret_sauce |
 	
-	
-	
 Scenario Outline: Verify that after logout user can not reach the inventory page 
 	When enter <UserName> and <Password> credentials
 	And click on login button
