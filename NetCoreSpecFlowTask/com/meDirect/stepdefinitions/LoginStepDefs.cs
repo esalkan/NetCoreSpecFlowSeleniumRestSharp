@@ -1,42 +1,45 @@
-using System;
 using NetCoreSpecFlowTask.com.meDirect.pages;
 using NetCoreSpecFlowTask.com.meDirect.toolbox;
 using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
-using TechTalk.SpecFlow.Assist;
 
 namespace NetCoreSpecFlowTask.com.meDirect.stepdefinitions
 {
     [Binding]
     public class LoginStepDefs
     {
+        // Anti-context injection code -- 100% wrong
         LoginPage _loginPage = new LoginPage();
-        
+        InventoryPage _inventory = new InventoryPage();
+
         [Given(@"navigate to the login page")]
         public void GivenNavigateToTheLoginPage()
         {
             Driver.getDriver().Navigate().GoToUrl("https://www.saucedemo.com/");
         }
 
-        [Given(@"enter valid credentials")]
-        public void GivenEnterValidCredentials(Table table)
+        [When(@"enter (.*) and (.*) credentials")]
+        public void WhenEnterAndCredentials(string userName, string password)
         {
-            dynamic data = table.CreateDynamicInstance();
-            _loginPage.fillTheLoginForm((string)data.UserName,(string)data.Password);
+            _loginPage.Login(userName,password);
         }
 
-        [Given(@"click on login button")]
-        public void GivenClickOnLoginButton()
+        [When(@"click on login button")]
+        public void WhenClickOnLoginButton()
         {
-            _loginPage.clickOnLoginBtn();
+            _loginPage.ClickOnLoginBtn();
         }
 
-        [Then(@"user should be in inventory page")]
-        public void ThenUserShouldBeInInventoryPage()
+        [Then(@"user should be in ""(.*)"" page")]
+        public void ThenUserShouldBeInPage(string expectedPageUrl)
         {
-            Assert.That(_loginPage.getActualTitle().ToString(), Is.EqualTo("Swag Labs"));
+            Assert.IsTrue(_loginPage.GetActualPageUrl().Contains(expectedPageUrl));
+        }
+
+        [Then(@"user should see ""(.*)"" error message")]
+        public void ThenUserShouldSeeErrorMessage(string expectedError)
+        {
+            Assert.IsTrue(_loginPage.GetWrongCredentialErrorMessage().Equals(expectedError));
         }
     }
 }
