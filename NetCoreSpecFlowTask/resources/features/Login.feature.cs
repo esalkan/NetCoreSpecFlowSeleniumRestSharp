@@ -125,6 +125,9 @@ namespace NetCoreSpecFlowTask.Resources.Features
         [NUnit.Framework.TestCaseAttribute("standard_user", "", "Epic sadface: Password is required", null)]
         [NUnit.Framework.TestCaseAttribute("", "secret_sauce", "Epic sadface: Username is required", null)]
         [NUnit.Framework.TestCaseAttribute("standard_user", "random_pass", "Epic sadface: Username and password do not match any user in this service", null)]
+        [NUnit.Framework.TestCaseAttribute("problem_user", "random_pass", "Epic sadface: Username and password do not match any user in this service", null)]
+        [NUnit.Framework.TestCaseAttribute("performance_glitch_user", "random_pass", "Epic sadface: Username and password do not match any user in this service", null)]
+        [NUnit.Framework.TestCaseAttribute("", "", "Epic sadface: Username is required", null)]
         public void LoginFeatureWithInvalidUsersCredentials(string userName, string password, string errorMessage, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;

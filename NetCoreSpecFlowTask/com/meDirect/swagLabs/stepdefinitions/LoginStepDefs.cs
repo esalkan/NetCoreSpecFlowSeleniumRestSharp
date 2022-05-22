@@ -41,14 +41,7 @@ namespace NetCoreSpecFlowTask.com.meDirect.stepdefinitions
             Assert.IsTrue(_loginPage.GetActualPageUrl().Contains(expectedPageUrl)); // Asserts that the actual page url contains the expected page url
         }
 
-        /* Verify the inventory page is displayed
-        [Then(@"user should see ""(.*)"" error message")]
-        public void ThenUserShouldSeeErrorMessage(string expectedError)
-        {
-            Assert.IsTrue(_loginPage.GetWrongCredentialErrorMessage().Equals(expectedError)); // Asserts that the actual error message equals the expected error message
-        }
-*/
-
+        // Verify the error message is displayed
         [Then(@"user should see (.*) error message")]
         public void ThenUserShouldSeeErrorMessage(string errorMessage)
         {

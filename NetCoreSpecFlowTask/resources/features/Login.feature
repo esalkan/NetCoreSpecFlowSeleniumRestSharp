@@ -23,8 +23,11 @@ Feature: Login Feature
 		And click on login button
 		Then user should see <ErrorMessage> error message
 		Examples: 
-		  | UserName      | Password     | ErrorMessage                                                              |
-		  | standard_user |              | Epic sadface: Password is required                                        |
-		  |               | secret_sauce | Epic sadface: Username is required                                        |
-		  | standard_user | random_pass  | Epic sadface: Username and password do not match any user in this service |
-		  
+		  | UserName                | Password     | ErrorMessage                                                              |
+		  | standard_user           |              | Epic sadface: Password is required                                        |
+		  |                         | secret_sauce | Epic sadface: Username is required                                        |
+		  | standard_user           | random_pass  | Epic sadface: Username and password do not match any user in this service |
+		  | problem_user            | random_pass  | Epic sadface: Username and password do not match any user in this service |
+		  | performance_glitch_user | random_pass  | Epic sadface: Username and password do not match any user in this service |
+		  |                         |              | Epic sadface: Username is required                                        |
+    
