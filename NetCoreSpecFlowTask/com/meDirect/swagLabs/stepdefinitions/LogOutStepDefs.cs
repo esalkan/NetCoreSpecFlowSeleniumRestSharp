@@ -9,27 +9,27 @@ namespace NetCoreSpecFlowTask.com.meDirect.stepdefinitions
     public sealed class LogOutStepDefs
     {
         // This is the page object for the LogOut page
-        InventoryPage _inventory = new InventoryPage();
+        ProductsPage _products = new ProductsPage();
         
         [When(@"click on hamburger menu")]
         // This method is used to click on the hamburger menu
         public void WhenClickOnHamburgerMenu()
         {
-            _inventory.hamburgerMenu.Click();
+            _products.hamburgerMenu.Click();
         }
 
         [When(@"click on logout button")]
         // This method is used to click on the logout button
         public void WhenClickOnLogoutButton()
         {
-            _inventory.logOutBtn.Click();
+            _products.logOutBtn.Click();
         }
 
         [Then(@"user should be in login ""(.*)"" page")]
         // This method is used to verify the user is in the login page
         public void ThenUserShouldBeInLoginPage(string expectedUrl)
         {
-            Assert.That(_inventory.GetActualPageUrl().Equals(expectedUrl));
+            Assert.That(_products.GetActualPageUrl().Equals(expectedUrl));
         }
 
         [When(@"navigate back")]
@@ -38,5 +38,6 @@ namespace NetCoreSpecFlowTask.com.meDirect.stepdefinitions
         {
             Driver.getDriver().Navigate().Back();
         }
+        
     }
 }

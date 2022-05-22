@@ -12,7 +12,6 @@ namespace NetCoreSpecFlowTask.com.meDirect.stepdefinitions
     {
         // Our page objects are defined here and instantiated in the constructor of the class that contains the step definitions
         LoginPage _loginPage = new LoginPage();
-        InventoryPage _inventory = new InventoryPage();
 
         // Step definitions are defined here and called from the feature file using the [Given] or [When] tags respectively
         [Given(@"navigate to the login page")]
@@ -42,11 +41,19 @@ namespace NetCoreSpecFlowTask.com.meDirect.stepdefinitions
             Assert.IsTrue(_loginPage.GetActualPageUrl().Contains(expectedPageUrl)); // Asserts that the actual page url contains the expected page url
         }
 
-        // Verify the inventory page is displayed
+        /* Verify the inventory page is displayed
         [Then(@"user should see ""(.*)"" error message")]
         public void ThenUserShouldSeeErrorMessage(string expectedError)
         {
             Assert.IsTrue(_loginPage.GetWrongCredentialErrorMessage().Equals(expectedError)); // Asserts that the actual error message equals the expected error message
         }
+*/
+
+        [Then(@"user should see (.*) error message")]
+        public void ThenUserShouldSeeErrorMessage(string errorMessage)
+        {
+            Assert.IsTrue(_loginPage.GetWrongCredentialErrorMessage().Equals(errorMessage)); // Asserts that the actual error message equals the expected error message
+        }
+
     }
 }

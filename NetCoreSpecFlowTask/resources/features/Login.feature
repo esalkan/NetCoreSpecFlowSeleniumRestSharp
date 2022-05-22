@@ -21,40 +21,10 @@ Feature: Login Feature
 	Scenario Outline: Login feature with invalid users credentials
 		When enter <UserName> and <Password> credentials
 		And click on login button
-		Then user should see "Epic sadface: Username and password do not match any user in this service" error message
+		Then user should see <ErrorMessage> error message
 		Examples: 
-			| UserName      | Password     |
-			| standard_user | sauce_secret |
-			| user_standard | secret_sauce |
-
-	####################################################################################################################
-  
-	Scenario: Login feature with locked out user credentials
-		When enter <UserName> and <Password> credentials
-		And click on login button
-		Then user should see "Epic sadface: Sorry, this user has been locked out." error message
-		Examples: 
-		  | UserName        | Password     |
-		  | locked_out_user | secret_sauce |
-	
-	####################################################################################################################
-
-	Scenario: Login feature with valid username and empty password credentials
-		When enter <UserName> and <Password> credentials
-		And click on login button
-		Then user should see "Epic sadface: Password is required" error message
-		Examples: 
-		  | UserName                | Password |
-		  | standard_user           |          |
-		  | problem_user            |          |
-		  | performance_glitch_user |          |
-    
-	####################################################################################################################
-
-	Scenario: Login feature with empty username and valid password
-		When enter <UserName> and <Password> credentials
-		And click on login button
-		Then user should see "Epic sadface: Username is required" error message
-		Examples: 
-		  | UserName | Password     |
-		  |          | sauce_secret |
+		  | UserName      | Password     | ErrorMessage                                                              |
+		  | standard_user |              | Epic sadface: Password is required                                        |
+		  |               | secret_sauce | Epic sadface: Username is required                                        |
+		  | standard_user | random_pass  | Epic sadface: Username and password do not match any user in this service |
+		  

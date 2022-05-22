@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 namespace NetCoreSpecFlowTask.com.meDirect.pages
 {
     // This class is used to define the elements on the page
-    public class InventoryPage : BasePage
+    public class ProductsPage : BasePage
     {
         // UI Elements
         public IWebElement hamburgerMenu => Driver.getDriver().FindElement(By.Id("react-burger-menu-btn"));

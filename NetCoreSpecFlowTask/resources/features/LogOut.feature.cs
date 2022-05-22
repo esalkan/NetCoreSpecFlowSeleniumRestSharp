@@ -73,6 +73,15 @@ namespace NetCoreSpecFlowTask.Resources.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 4
+ #line hidden
+#line 5
+  testRunner.Given("navigate to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("User should be able logout")]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", null)]
@@ -85,8 +94,8 @@ namespace NetCoreSpecFlowTask.Resources.Features
             argumentsOfScenario.Add("UserName", userName);
             argumentsOfScenario.Add("Password", password);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User should be able logout", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 4
-this.ScenarioInitialize(scenarioInfo);
+#line 7
+ this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -95,26 +104,26 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 5
- testRunner.Given("navigate to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 6
- testRunner.When(string.Format("enter {0} and {1} credentials", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 7
- testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 4
+ this.FeatureBackground();
 #line hidden
 #line 8
- testRunner.Then("user should be in \"inventory.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.When(string.Format("enter {0} and {1} credentials", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
- testRunner.When("click on hamburger menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
- testRunner.And("click on logout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.Then("user should be in \"inventory.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 11
- testRunner.Then("user should be in login \"https://www.saucedemo.com/\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.When("click on hamburger menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 12
+  testRunner.And("click on logout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 13
+  testRunner.Then("user should be in login \"https://www.saucedemo.com/\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -122,18 +131,19 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify that after logout user can not reach the inventory page")]
-        [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", null)]
-        [NUnit.Framework.TestCaseAttribute("problem_user", "secret_sauce", null)]
-        [NUnit.Framework.TestCaseAttribute("performance_glitch_user", "secret_sauce", null)]
-        public void VerifyThatAfterLogoutUserCanNotReachTheInventoryPage(string userName, string password, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "Epic sadface: You can only access \'/inventory.html\' when you are logged in.", null)]
+        [NUnit.Framework.TestCaseAttribute("problem_user", "secret_sauce", "Epic sadface: You can only access \'/inventory.html\' when you are logged in.", null)]
+        [NUnit.Framework.TestCaseAttribute("performance_glitch_user", "secret_sauce", "Epic sadface: You can only access \'/inventory.html\' when you are logged in.", null)]
+        public void VerifyThatAfterLogoutUserCanNotReachTheInventoryPage(string userName, string password, string errorMessage, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("UserName", userName);
             argumentsOfScenario.Add("Password", password);
+            argumentsOfScenario.Add("ErrorMessage", errorMessage);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify that after logout user can not reach the inventory page", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 20
-this.ScenarioInitialize(scenarioInfo);
+ this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -142,27 +152,29 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
+#line 4
+ this.FeatureBackground();
+#line hidden
 #line 21
- testRunner.When(string.Format("enter {0} and {1} credentials", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.When(string.Format("enter {0} and {1} credentials", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 22
- testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 23
- testRunner.Then("user should be in \"inventory.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("user should be in \"inventory.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 24
- testRunner.When("click on hamburger menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.When("click on hamburger menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 25
- testRunner.And("click on logout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("click on logout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 26
- testRunner.And("navigate back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("navigate back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 27
- testRunner.Then("user should see \"Epic sadface: You can only access \'/inventory.html\' when you are" +
-                        " logged in.\" error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then(string.Format("user should see {0} error message", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

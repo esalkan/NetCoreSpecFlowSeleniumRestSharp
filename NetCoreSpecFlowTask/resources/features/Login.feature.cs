@@ -122,14 +122,16 @@ namespace NetCoreSpecFlowTask.Resources.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Login feature with invalid users credentials")]
-        [NUnit.Framework.TestCaseAttribute("standard_user", "sauce_secret", null)]
-        [NUnit.Framework.TestCaseAttribute("user_standard", "secret_sauce", null)]
-        public void LoginFeatureWithInvalidUsersCredentials(string userName, string password, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("standard_user", "", "Epic sadface: Password is required", null)]
+        [NUnit.Framework.TestCaseAttribute("", "secret_sauce", "Epic sadface: Username is required", null)]
+        [NUnit.Framework.TestCaseAttribute("standard_user", "random_pass", "Epic sadface: Username and password do not match any user in this service", null)]
+        public void LoginFeatureWithInvalidUsersCredentials(string userName, string password, string errorMessage, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("UserName", userName);
             argumentsOfScenario.Add("Password", password);
+            argumentsOfScenario.Add("ErrorMessage", errorMessage);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login feature with invalid users credentials", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 21
  this.ScenarioInitialize(scenarioInfo);
@@ -151,119 +153,7 @@ namespace NetCoreSpecFlowTask.Resources.Features
   testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 24
-  testRunner.Then("user should see \"Epic sadface: Username and password do not match any user in thi" +
-                        "s service\" error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Login feature with locked out user credentials")]
-        [NUnit.Framework.TestCaseAttribute("locked_out_user", "secret_sauce", null)]
-        public void LoginFeatureWithLockedOutUserCredentials(string userName, string password, string[] exampleTags)
-        {
-            string[] tagsOfScenario = exampleTags;
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("UserName", userName);
-            argumentsOfScenario.Add("Password", password);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login feature with locked out user credentials", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 32
- this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 4
- this.FeatureBackground();
-#line hidden
-#line 33
-  testRunner.When(string.Format("enter {0} and {1} credentials", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 34
-  testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 35
-  testRunner.Then("user should see \"Epic sadface: Sorry, this user has been locked out.\" error messa" +
-                        "ge", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Login feature with valid username and empty password credentials")]
-        [NUnit.Framework.TestCaseAttribute("standard_user", "", null)]
-        [NUnit.Framework.TestCaseAttribute("problem_user", "", null)]
-        [NUnit.Framework.TestCaseAttribute("performance_glitch_user", "", null)]
-        public void LoginFeatureWithValidUsernameAndEmptyPasswordCredentials(string userName, string password, string[] exampleTags)
-        {
-            string[] tagsOfScenario = exampleTags;
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("UserName", userName);
-            argumentsOfScenario.Add("Password", password);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login feature with valid username and empty password credentials", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 42
- this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 4
- this.FeatureBackground();
-#line hidden
-#line 43
-  testRunner.When(string.Format("enter {0} and {1} credentials", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 44
-  testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 45
-  testRunner.Then("user should see \"Epic sadface: Password is required\" error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Login feature with empty username and valid password")]
-        [NUnit.Framework.TestCaseAttribute("", "sauce_secret", null)]
-        public void LoginFeatureWithEmptyUsernameAndValidPassword(string userName, string password, string[] exampleTags)
-        {
-            string[] tagsOfScenario = exampleTags;
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("UserName", userName);
-            argumentsOfScenario.Add("Password", password);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login feature with empty username and valid password", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 54
- this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 4
- this.FeatureBackground();
-#line hidden
-#line 55
-  testRunner.When(string.Format("enter {0} and {1} credentials", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 56
-  testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 57
-  testRunner.Then("user should see \"Epic sadface: Password is required\" error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then(string.Format("user should see {0} error message", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
