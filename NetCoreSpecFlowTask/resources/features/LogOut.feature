@@ -4,6 +4,7 @@ Feature: LogOut Feature
 	Background: 
 		Given navigate to the login page
 	
+	@smoke
 	Scenario: User should be able logout
 		When enter <UserName> and <Password> credentials
 		And click on login button
@@ -17,6 +18,7 @@ Feature: LogOut Feature
 		  | problem_user            | secret_sauce |
 		  | performance_glitch_user | secret_sauce |
 	
+	@smoke
 	Scenario Outline: Verify that after logout user can not reach the inventory page 
 		When enter <UserName> and <Password> credentials
 		And click on login button
