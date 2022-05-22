@@ -1,4 +1,7 @@
+using System;
+using System.Collections.Generic;
 using NetCoreSpecFlowTask.com.meDirect.toolbox;
+using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
 namespace NetCoreSpecFlowTask.com.meDirect.pages
@@ -6,6 +9,20 @@ namespace NetCoreSpecFlowTask.com.meDirect.pages
     // Page Object
     public abstract class BasePage
     {
+        // UI Elements
+        public IWebElement pageTitle =>
+            Driver.getDriver().FindElement(By.XPath("//span[@class='title']"));
+        
+        public IWebElement hamburgerMenu => 
+            Driver.getDriver().FindElement(By.Id("react-burger-menu-btn"));
+        
+        public IWebElement logOutBtn => 
+            Driver.getDriver().FindElement(By.Id("logout_sidebar_link"));
+
+        public IWebElement shoppingCartBtn => 
+            Driver.getDriver().FindElement(By.CssSelector("div>a.shopping_cart_link"));
+        
+        
         // This is the base page class that all other pages will inherit from.
         protected BasePage() // This is the constructor for the base page class.
         {
@@ -23,7 +40,25 @@ namespace NetCoreSpecFlowTask.com.meDirect.pages
         {
             return Driver.getDriver().Url;
         }
+
+        public void AddToCartBtn()
+        {
+            Driver.getDriver().FindElement(By.XPath("//button[starts-with(@id,'add-to-cart')]")).Click();
+        }
+
+        public void ShoppingCartBtn()
+        {
+            Driver.getDriver().FindElement(By.XPath("//a[@class='shopping_cart_link']")).Click();
+        }
+
+        public void CheckOutBtn()
+        {
+            Driver.getDriver().FindElement(By.XPath("//button[@id='checkout']")).Click();   
+        }
+
         
 
+        
+        
     }
 }
