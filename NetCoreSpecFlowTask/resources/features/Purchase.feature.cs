@@ -80,14 +80,14 @@ namespace NetCoreSpecFlowTask.Resources.Features
 #line 5
   testRunner.Given("navigate to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                         "UserName",
                         "Password"});
-            table4.AddRow(new string[] {
+            table5.AddRow(new string[] {
                         "standard_user",
                         "secret_sauce"});
 #line 6
-  testRunner.When("enters valid credentials", ((string)(null)), table4, "When ");
+  testRunner.When("enters valid credentials", ((string)(null)), table5, "When ");
 #line hidden
 #line 9
   testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

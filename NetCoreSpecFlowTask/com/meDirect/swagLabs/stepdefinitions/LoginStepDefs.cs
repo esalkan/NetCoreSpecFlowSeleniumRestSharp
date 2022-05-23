@@ -1,3 +1,6 @@
+using AventStack.ExtentReports;
+using AventStack.ExtentReports.Gherkin.Model;
+using AventStack.ExtentReports.Reporter;
 using NetCoreSpecFlowTask.com.meDirect.pages;
 using NetCoreSpecFlowTask.com.meDirect.toolbox;
 using NUnit.Framework;
@@ -18,6 +21,8 @@ namespace NetCoreSpecFlowTask.com.meDirect.stepdefinitions
         public void GivenNavigateToTheLoginPage() // Navigates to the login page
         {
             Driver.getDriver().Navigate().GoToUrl("https://www.saucedemo.com/");
+            
+            
         }
 
         // Enter the username and password steps 
