@@ -17,5 +17,12 @@ namespace NetCoreSpecFlowTask.com.meDirect.swagLabs.stepdefinitions
             Assert.That(_singleProduct.getSingleProductDescription(), Is.EqualTo(description));
             Assert.That(_singleProduct.getSingleProductPrice(), Is.EqualTo(price));
         }
+
+
+        [Then(@"user navigate single product (.*) page")]
+        public void ThenUserNavigateSingleProductPage()
+        {
+            _singleProduct.selectARandomProduct().Click();
+        }
     }
 }

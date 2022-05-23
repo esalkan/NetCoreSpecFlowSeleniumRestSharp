@@ -11,7 +11,7 @@ Feature: SingleProductDetails
 		
 	@regression_1
 	Scenario Outline: Verify that product details are right in single product page
-		And user navigate single <Product> page
+		And user navigate single product <Product> page
 		Then verify <Product> name and <Description> description and <Price> price
 		Examples: 
 		  | Product                           | Description                                                                                                                                                            | Price |

@@ -1,5 +1,5 @@
 Feature: LogOut Feature
-	Logout Feature for SwagLabs After User Log-in
+	User should be able to logout successfully after login to the application
 
 	Background: 
 		Given navigate to the login page

@@ -28,7 +28,7 @@ namespace NetCoreSpecFlowTask.Resources.Features
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "Products.feature"
+#line 1 "Inventory.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
@@ -99,14 +99,12 @@ namespace NetCoreSpecFlowTask.Resources.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify that user see products in inventory page")]
-        [NUnit.Framework.CategoryAttribute("smoke")]
         public void VerifyThatUserSeeProductsInInventoryPage()
         {
-            string[] tagsOfScenario = new string[] {
-                    "smoke"};
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify that user see products in inventory page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 13
+#line 12
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -133,60 +131,8 @@ namespace NetCoreSpecFlowTask.Resources.Features
                             "Sauce Labs Onesie"});
                 table2.AddRow(new string[] {
                             "Test.allTheThings() T-Shirt (Red)"});
-#line 14
+#line 13
   testRunner.Then("verify that user see following products on inventory page", ((string)(null)), table2, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify that user can see product single page")]
-        [NUnit.Framework.CategoryAttribute("regression_1")]
-        [NUnit.Framework.TestCaseAttribute("Sauce Labs Backpack", "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromisi" +
-            "ng style with unequaled laptop and tablet protection.", null)]
-        [NUnit.Framework.TestCaseAttribute("Sauce Labs Bike Light", "A red light isn\'t the desired state in testing but it sure helps when riding your" +
-            " bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", null)]
-        [NUnit.Framework.TestCaseAttribute("Sauce Labs Bolt T-Shirt", "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American App" +
-            "arel, 100% ringspun combed cotton, heather gray with red bolt.", null)]
-        [NUnit.Framework.TestCaseAttribute("Sauce Labs Fleece Jacket", "It\'s not every day that you come across a midweight quarter-zip fleece jacket cap" +
-            "able of handling everything from a relaxing day outdoors to a busy day at the of" +
-            "fice.", null)]
-        [NUnit.Framework.TestCaseAttribute("Sauce Labs Onesie", "Rib snap infant onesie for the junior automation engineer in development. Reinfor" +
-            "ced 3-snap bottom closure, two-needle hemmed sleeved and bottom won\'t unravel.", null)]
-        [NUnit.Framework.TestCaseAttribute("Test.allTheThings() T-Shirt (Red)", "This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboa" +
-            "rd to automate a few tests. Super-soft and comfy ringspun combed cotton.", null)]
-        public void VerifyThatUserCanSeeProductSinglePage(string product, string description, string[] exampleTags)
-        {
-            string[] @__tags = new string[] {
-                    "regression_1"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Product", product);
-            argumentsOfScenario.Add("Description", description);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify that user can see product single page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 24
- this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 4
- this.FeatureBackground();
-#line hidden
-#line 25
-  testRunner.And(string.Format("user navigate single {0} page", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 26
-  testRunner.Then(string.Format("user should be in right {0} page and {1}", product, description), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

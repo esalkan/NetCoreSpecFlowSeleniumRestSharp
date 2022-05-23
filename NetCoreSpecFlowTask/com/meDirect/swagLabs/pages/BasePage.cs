@@ -56,7 +56,20 @@ namespace NetCoreSpecFlowTask.com.meDirect.pages
             Driver.getDriver().FindElement(By.XPath("//button[@id='checkout']")).Click();   
         }
 
-        
+                public IWebElement selectARandomProduct()
+        {
+            var random = new Random();
+            var list = new List<IWebElement>(
+                Driver.getDriver().FindElements(By.XPath("//div[@class='inventory_item_name']")));
+            var productList = new List<string>();
+            
+            foreach (IWebElement element in list)
+            {
+                productList.Add(element.Text);
+            }
+            var randomProduct = random.Next(productList.Count)+1;
+            return Driver.getDriver().FindElement(By.XPath("(//div[@class='inventory_item_label']/a)["+ randomProduct+"]"));
+        }
 
         
         

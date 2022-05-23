@@ -143,7 +143,7 @@ namespace NetCoreSpecFlowTask.Resources.Features
  this.FeatureBackground();
 #line hidden
 #line 14
-  testRunner.And(string.Format("user navigate single {0} page", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And(string.Format("user navigate single product {0} page", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
   testRunner.Then(string.Format("verify {0} name and {1} description and {2} price", product, description, price), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

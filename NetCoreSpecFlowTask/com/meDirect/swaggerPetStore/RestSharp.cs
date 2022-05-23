@@ -1,6 +1,8 @@
 using System;
 using RestSharp;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Assert = NUnit.Framework.Assert;
+
 namespace NetCoreSpecFlowTask.com.meDirect.swaggerPetStore
 {
     [TestClass]
@@ -14,7 +16,7 @@ namespace NetCoreSpecFlowTask.com.meDirect.swaggerPetStore
             request.AddUrlSegment("petId", 10);
 
             var content = client.ExecuteAsync(request);
-            Console.WriteLine(content.Result.Content);
+            
         }
     }
 }

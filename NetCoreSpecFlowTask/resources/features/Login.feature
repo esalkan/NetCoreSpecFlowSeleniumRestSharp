@@ -1,5 +1,5 @@
 Feature: Login Feature
-	Login Feature for SwagLabs https://www.saucedemo.com/
+	User should be able to login with valid credentials and user should not be able to login with invalid credentialsß
 
 	Background: Reach to the login page
 		Given navigate to the login page
