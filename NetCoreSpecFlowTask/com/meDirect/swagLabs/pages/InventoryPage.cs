@@ -9,9 +9,8 @@ namespace NetCoreSpecFlowTask.com.meDirect.pages
 {
     public class InventoryPage : BasePage
     {
-        public List<IWebElement> InventoryItems =>
-            Driver.getDriver().FindElements(By.XPath("//div[@class='inventory_item_name']")).ToList();
+        public IList<IWebElement> InventoryItems =>
+            Driver.getDriver().FindElements(By.XPath("//div[@class='inventory_item_name']"));
         
-
     }
 }

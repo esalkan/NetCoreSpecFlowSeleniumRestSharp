@@ -1,6 +1,8 @@
 using System;
 using NetCoreSpecFlowTask.com.meDirect.pages;
+using NetCoreSpecFlowTask.com.meDirect.toolbox;
 using NUnit.Framework;
+using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 
 namespace NetCoreSpecFlowTask.com.meDirect.swagLabs.stepdefinitions
@@ -20,9 +22,9 @@ namespace NetCoreSpecFlowTask.com.meDirect.swagLabs.stepdefinitions
 
 
         [Then(@"user navigate single product (.*) page")]
-        public void ThenUserNavigateSingleProductPage()
+        public void ThenUserNavigateSingleProductPage(string productName)
         {
-            _singleProduct.selectARandomProduct().Click();
+            Driver.getDriver().FindElement(By.LinkText(productName)).Click();
         }
     }
 }
