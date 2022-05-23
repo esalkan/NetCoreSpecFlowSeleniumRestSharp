@@ -35,7 +35,7 @@ namespace NetCoreSpecFlowTask.Resources.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "resources/features", "Purchas", "\tUser should be able to make a purchase", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "resources/features", "Purchas", "\tUser should be able to make a purchase successfully", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,14 +80,14 @@ namespace NetCoreSpecFlowTask.Resources.Features
 #line 5
   testRunner.Given("navigate to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "UserName",
                         "Password"});
-            table3.AddRow(new string[] {
+            table4.AddRow(new string[] {
                         "standard_user",
                         "secret_sauce"});
 #line 6
-  testRunner.When("enters valid credentials", ((string)(null)), table3, "When ");
+  testRunner.When("enters valid credentials", ((string)(null)), table4, "When ");
 #line hidden
 #line 9
   testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

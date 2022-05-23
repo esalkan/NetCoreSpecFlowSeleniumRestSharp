@@ -80,14 +80,14 @@ namespace NetCoreSpecFlowTask.Resources.Features
 #line 5
   testRunner.Given("navigate to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "UserName",
                         "Password"});
-            table1.AddRow(new string[] {
+            table2.AddRow(new string[] {
                         "standard_user",
                         "secret_sauce"});
 #line 6
-  testRunner.When("enters valid credentials", ((string)(null)), table1, "When ");
+  testRunner.When("enters valid credentials", ((string)(null)), table2, "When ");
 #line hidden
 #line 9
   testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -117,22 +117,22 @@ namespace NetCoreSpecFlowTask.Resources.Features
 #line 4
  this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "ProductName"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Sauce Labs Backpack"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Sauce Labs Bike Light"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Sauce Labs Bolt T-Shirt"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Sauce Labs Fleece Jacket"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Sauce Labs Onesie"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Test.allTheThings() T-Shirt (Red)"});
 #line 13
-  testRunner.Then("verify that user see following products on inventory page", ((string)(null)), table2, "Then ");
+  testRunner.Then("verify that user see following products on inventory page", ((string)(null)), table3, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

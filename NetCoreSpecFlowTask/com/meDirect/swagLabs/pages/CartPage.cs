@@ -32,6 +32,9 @@ namespace NetCoreSpecFlowTask.com.meDirect.pages
         public IWebElement cartContinueShoppingButton =>
             Driver.getDriver().FindElement(By.Id("continue-shopping"));
         
+        public IWebElement removedCartItem =>
+            Driver.getDriver().FindElement(By.XPath("//div[@class='removed_cart_item']"));
+        
         // This method is used to get the product name from the cart page
         public string getCardProductName()
         {
