@@ -1,4 +1,5 @@
 Feature: Checkout Feature
+    
     Background: User is on the login page
         Given navigate to the login page
         When enters valid credentials

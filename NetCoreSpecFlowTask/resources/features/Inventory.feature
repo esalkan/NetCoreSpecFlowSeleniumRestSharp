@@ -1,5 +1,5 @@
 Feature: Inventories
-	Inventory welcome page should show products
+	User Should be able to see the list of products in the inventory page
 
 	Background: User is on the login page
 		Given navigate to the login page
