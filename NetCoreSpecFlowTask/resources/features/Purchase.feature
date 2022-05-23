@@ -1,4 +1,4 @@
-Feature: Purchas
+Feature: Purchase
 	User should be able to make a purchase successfully
 
 	Background: User is on the login page
