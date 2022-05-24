@@ -95,6 +95,6 @@ Creating frameworks to test websites is a lot of fun. I imagine it will be easie
 
 It is the first Test framework I have written using C#, SpecFlow, and RestSharp, which I have never used until the last week. There may be many omissions, errors, and inaccuracies. Cases and scenarios can be derived and applied more.
 
-For this project following things were done:
+For this project I spent my time on the following:
 ![Dashboard](NetCoreSpecFlowTask/sourceDocs/waka.png)
 <hr>
