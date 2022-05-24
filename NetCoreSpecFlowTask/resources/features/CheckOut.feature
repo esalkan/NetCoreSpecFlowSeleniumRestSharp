@@ -1,5 +1,7 @@
 Feature: Checkout Feature
     
+    ####################################################################################################################
+    
     Background: User is on the login page
         Given navigate to the login page
         When enters valid credentials
@@ -7,7 +9,11 @@ Feature: Checkout Feature
           | standard_user | secret_sauce |
         And click on login button
         Then user should be in "inventory.html" page
-
+        
+    ####################################################################################################################
+           
+    @smoke
+    @regression_2
     Scenario: All Fields Empty Error Message
         And user select a random product 
         And user add the product to the chart
@@ -17,6 +23,10 @@ Feature: Checkout Feature
         And click on continue button
         Then user should see the error message "Error: First Name is required"
 
+    ####################################################################################################################
+        
+    @smoke
+    @regression_2
     Scenario: Last Name Error Message
         And user select a random product 
         And user add the product to the chart
@@ -27,6 +37,10 @@ Feature: Checkout Feature
         And click on continue button
         Then user should see the error message "Error: Last Name is required"
 
+    ####################################################################################################################
+        
+    @smoke
+    @regression_2
     Scenario: Postal Code Error Message
         And user select a random product 
         And user add the product to the chart

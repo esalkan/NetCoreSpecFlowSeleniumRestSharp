@@ -5,7 +5,10 @@ Feature: Login Feature
 		Given navigate to the login page
 
 	####################################################################################################################
+		
 	@smoke	
+	@regression_1
+	@validLogin
 	Scenario Outline: Login feature with valid users credentials
 		When enter <UserName> and <Password> credentials
 		And click on login button
@@ -17,7 +20,10 @@ Feature: Login Feature
 			| performance_glitch_user | secret_sauce |
     
 	####################################################################################################################
+
 	@smoke
+	@regression_1
+	@invalidLogin
 	Scenario Outline: Login feature with invalid users credentials
 		When enter <UserName> and <Password> credentials
 		And click on login button

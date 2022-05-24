@@ -1,10 +1,16 @@
 Feature: LogOut Feature
 	User should be able to logout successfully after login to the application
 
+	####################################################################################################################
+	
 	Background: 
 		Given navigate to the login page
 	
+	####################################################################################################################
+		
 	@smoke
+	@logOut
+	@regression_1
 	Scenario: User should be able logout
 		When enter <UserName> and <Password> credentials
 		And click on login button
@@ -18,7 +24,10 @@ Feature: LogOut Feature
 		  | problem_user            | secret_sauce |
 		  | performance_glitch_user | secret_sauce |
 	
+	####################################################################################################################
+
 	@smoke
+	@regression_1
 	Scenario Outline: Verify that after logout user can not reach the inventory page 
 		When enter <UserName> and <Password> credentials
 		And click on login button
@@ -32,4 +41,3 @@ Feature: LogOut Feature
 		  | standard_user           | secret_sauce | Epic sadface: You can only access '/inventory.html' when you are logged in. |
 		  | problem_user            | secret_sauce | Epic sadface: You can only access '/inventory.html' when you are logged in. |
 		  | performance_glitch_user | secret_sauce | Epic sadface: You can only access '/inventory.html' when you are logged in. |
-   

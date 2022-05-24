@@ -41,22 +41,26 @@ namespace NetCoreSpecFlowTask.com.meDirect.pages
             return Driver.getDriver().Url;
         }
 
+        // click on add to cart button method
         public void AddToCartBtn()
         {
             Driver.getDriver().FindElement(By.XPath("//button[starts-with(@id,'add-to-cart')]")).Click();
         }
 
+        // Click on shopping cart button method
         public void ShoppingCartBtn()
         {
             Driver.getDriver().FindElement(By.XPath("//a[@class='shopping_cart_link']")).Click();
         }
 
+        // click on checkout button method
         public void CheckOutBtn()
         {
             Driver.getDriver().FindElement(By.XPath("//button[@id='checkout']")).Click();   
         }
 
-                public IWebElement selectARandomProduct()
+        // This method will select random product from the list of products.
+        public IWebElement selectARandomProduct()
         {
             var random = new Random();
             var list = new List<IWebElement>(

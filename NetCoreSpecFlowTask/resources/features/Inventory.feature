@@ -1,6 +1,8 @@
 Feature: Inventories
 	User Should be able to see the list of products in the inventory page
 
+	####################################################################################################################
+	
 	Background: User is on the login page
 		Given navigate to the login page
 		When enters valid credentials
@@ -9,6 +11,10 @@ Feature: Inventories
 		And click on login button
 		Then user should be in "inventory.html" page
 	
+	####################################################################################################################
+		
+	@smoke
+	@regression_1
 	Scenario: Verify that user see products in inventory page
 		Then verify that user see following products on inventory page
 			| ProductName                       |
@@ -18,6 +24,3 @@ Feature: Inventories
 			| Sauce Labs Fleece Jacket          |
 			| Sauce Labs Onesie                 |
 			| Test.allTheThings() T-Shirt (Red) |
-    
-				  
-

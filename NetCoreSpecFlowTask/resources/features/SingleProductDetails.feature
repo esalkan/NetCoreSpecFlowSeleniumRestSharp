@@ -1,6 +1,8 @@
 Feature: SingleProductDetails
 	Controlling single product details which are shown in the inventory page.
-
+	
+	####################################################################################################################
+	
 	Background: User is on the login page
 		Given navigate to the login page
 		When enters valid credentials
@@ -8,7 +10,10 @@ Feature: SingleProductDetails
 		  | standard_user | secret_sauce |
 		And click on login button
 		Then user should be in "inventory.html" page
-		
+	
+	####################################################################################################################
+			
+	@smoke
 	@regression_1
 	Scenario Outline: Verify that product details are right in single product page
 		And user navigate single product <Product> page
