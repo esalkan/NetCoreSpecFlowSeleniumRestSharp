@@ -1,6 +1,5 @@
 # NetCore SpecFlow Selenium RestSharp Automation Test Project
  Testing Framework for the SauceDemo website using Selenium, NUnit and Specflow
-<hr>
 
 ## Deliverables
  - Detailed user stories at the top of each Feature file 
@@ -11,16 +10,12 @@
  - Test frame work using RestSharp
  - All tests accompanied by Gherkin statements
 
-<hr>
-
 ## Requirements
  - Selenium WebDriver
  - NUnit
  - SpecFlow
  - RestSharp
  - Page-Object Model Framework
-
-<hr>
 
 ## Setup 
  - Download Github repository
@@ -36,8 +31,6 @@ NuGet Packeges used:
  - SeleniumWebDriver.ChromeDriver
  - SpecFlow
  - SpecFlow.NUnit
-
-<hr>
 
 ## Project Package And File Structure
    ![structure](NetCoreSpecFlowTask/sourceDocs/structure.png)
@@ -59,13 +52,15 @@ NuGet Packeges used:
 
 
 * **Reports** 
-    * [ExtentReports related Test Reports]()
+    * ExtentReports related Test Reports
 
 
 * **resources** ↣ **features** 
    * Contains scripts written in Gherkin in feature/execution file.
 
-<hr>
+## Test Reports
+   ![Dashboard](NetCoreSpecFlowTask/sourceDocs/dashboard.png)
+   ![Details](NetCoreSpecFlowTask/sourceDocs/details.png)
 
 ## UI Test Cases
 
@@ -100,4 +95,6 @@ Creating frameworks to test websites is a lot of fun. I imagine it will be easie
 
 It is the first Test framework I have written using C#, SpecFlow, and RestSharp, which I have never used until the last week. There may be many omissions, errors, and inaccuracies. Cases and scenarios can be derived and applied more.
 
+For this project following things were done:
+![Dashboard](NetCoreSpecFlowTask/sourceDocs/waka.png)
 <hr>
