@@ -1,10 +1,17 @@
 using System;
 using System.Collections.Generic;
-using NetCoreSpecFlowTask.com.meDirect.toolbox;
+using NetCoreSpecFlowTask.meDirect.com.saucedemo.toolbox;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
-namespace NetCoreSpecFlowTask.com.meDirect.pages
+/*
+ * @author esalkan
+ * @vcard https://esalkan.com
+ * @project MeDirect - Skill Assessment
+ * @type Web & Api Automation 
+ * @repo https://github.com/esalkan/AutomationNetCoreSpecFlowSelenium.git
+ */
+namespace NetCoreSpecFlowTask.meDirect.com.saucedemo.pages
 {
     // Page Object
     public abstract class BasePage

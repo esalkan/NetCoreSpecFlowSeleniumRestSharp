@@ -75,9 +75,9 @@ namespace NetCoreSpecFlowTask.Resources.Features
         
         public virtual void FeatureBackground()
         {
-#line 2
+#line 11
     #line hidden
-#line 3
+#line 12
         testRunner.Given("navigate to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -86,25 +86,29 @@ namespace NetCoreSpecFlowTask.Resources.Features
             table2.AddRow(new string[] {
                         "standard_user",
                         "secret_sauce"});
-#line 4
+#line 13
         testRunner.When("enters valid credentials", ((string)(null)), table2, "When ");
 #line hidden
-#line 7
+#line 16
         testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 8
+#line 17
         testRunner.Then("user should be in \"inventory.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("All Fields Empty Error Message")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
+        [NUnit.Framework.CategoryAttribute("regression_2")]
         public void AllFieldsEmptyErrorMessage()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "smoke",
+                    "regression_2"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("All Fields Empty Error Message", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 10
+#line 23
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -114,28 +118,28 @@ namespace NetCoreSpecFlowTask.Resources.Features
             else
             {
                 this.ScenarioStart();
-#line 2
+#line 11
     this.FeatureBackground();
 #line hidden
-#line 11
+#line 24
         testRunner.And("user select a random product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 12
+#line 25
         testRunner.And("user add the product to the chart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 13
+#line 26
         testRunner.And("navigate to cart page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 14
+#line 27
         testRunner.And("click on checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 15
+#line 28
         testRunner.Then("user should be in \"checkout-step-one.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 16
+#line 29
         testRunner.And("click on continue button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 17
+#line 30
         testRunner.Then("user should see the error message \"Error: First Name is required\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -144,12 +148,16 @@ namespace NetCoreSpecFlowTask.Resources.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Last Name Error Message")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
+        [NUnit.Framework.CategoryAttribute("regression_2")]
         public void LastNameErrorMessage()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "smoke",
+                    "regression_2"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Last Name Error Message", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 19
+#line 36
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -159,31 +167,31 @@ namespace NetCoreSpecFlowTask.Resources.Features
             else
             {
                 this.ScenarioStart();
-#line 2
+#line 11
     this.FeatureBackground();
 #line hidden
-#line 20
+#line 37
         testRunner.And("user select a random product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 21
+#line 38
         testRunner.And("user add the product to the chart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 22
+#line 39
         testRunner.And("navigate to cart page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 23
+#line 40
         testRunner.And("click on checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 24
+#line 41
         testRunner.Then("user should be in \"checkout-step-one.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 25
+#line 42
         testRunner.And("enter first name \"Eyüp Sabri\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 26
+#line 43
         testRunner.And("click on continue button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 27
+#line 44
         testRunner.Then("user should see the error message \"Error: Last Name is required\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -192,12 +200,16 @@ namespace NetCoreSpecFlowTask.Resources.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Postal Code Error Message")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
+        [NUnit.Framework.CategoryAttribute("regression_2")]
         public void PostalCodeErrorMessage()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "smoke",
+                    "regression_2"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Postal Code Error Message", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 29
+#line 50
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -207,34 +219,34 @@ namespace NetCoreSpecFlowTask.Resources.Features
             else
             {
                 this.ScenarioStart();
-#line 2
+#line 11
     this.FeatureBackground();
 #line hidden
-#line 30
+#line 51
         testRunner.And("user select a random product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 31
+#line 52
         testRunner.And("user add the product to the chart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 32
+#line 53
         testRunner.And("navigate to cart page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 33
+#line 54
         testRunner.And("click on checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 34
+#line 55
         testRunner.Then("user should be in \"checkout-step-one.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 35
+#line 56
         testRunner.And("enter first name \"Eyüp Sabri\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 36
+#line 57
         testRunner.And("enter last name \"ALKAN\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 37
+#line 58
         testRunner.And("click on continue button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 38
+#line 59
         testRunner.Then("user should see the error message \"Error: Postal Code is required\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

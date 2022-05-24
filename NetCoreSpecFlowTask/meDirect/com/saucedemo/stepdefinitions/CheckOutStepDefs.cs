@@ -1,8 +1,14 @@
-using NetCoreSpecFlowTask.com.meDirect.pages;
+using NetCoreSpecFlowTask.meDirect.com.saucedemo.pages;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
-
-namespace NetCoreSpecFlowTask.com.meDirect.swagLabs.stepdefinitions
+/*
+ * @author esalkan
+ * @vcard https://esalkan.com
+ * @project MeDirect - Skill Assessment
+ * @type Web & Api Automation 
+ * @repo https://github.com/esalkan/AutomationNetCoreSpecFlowSelenium.git
+ */
+namespace NetCoreSpecFlowTask.meDirect.com.saucedemo.stepdefinitions
 {
     [Binding]
     public class CheckOutStepDefs

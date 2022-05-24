@@ -20,8 +20,8 @@ namespace NetCoreSpecFlowTask.Resources.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Purchas")]
-    public partial class PurchasFeature
+    [NUnit.Framework.DescriptionAttribute("Purchase")]
+    public partial class PurchaseFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -35,7 +35,7 @@ namespace NetCoreSpecFlowTask.Resources.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "resources/features", "Purchas", "\tUser should be able to make a purchase successfully", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "resources/features", "Purchase", "\tUser should be able to make a purchase successfully", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,9 +75,9 @@ namespace NetCoreSpecFlowTask.Resources.Features
         
         public virtual void FeatureBackground()
         {
-#line 4
+#line 12
  #line hidden
-#line 5
+#line 13
   testRunner.Given("navigate to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
@@ -86,26 +86,30 @@ namespace NetCoreSpecFlowTask.Resources.Features
             table5.AddRow(new string[] {
                         "standard_user",
                         "secret_sauce"});
-#line 6
+#line 14
   testRunner.When("enters valid credentials", ((string)(null)), table5, "When ");
 #line hidden
-#line 9
+#line 17
   testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 10
+#line 18
   testRunner.Then("user should be in \"inventory.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify that user can buy a product")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
+        [NUnit.Framework.CategoryAttribute("regression_1")]
         public void VerifyThatUserCanBuyAProduct()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "smoke",
+                    "regression_1"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify that user can buy a product", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 12
-this.ScenarioInitialize(scenarioInfo);
+#line 24
+ this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -114,32 +118,32 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 4
+#line 12
  this.FeatureBackground();
 #line hidden
-#line 13
- testRunner.And("user select a random product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 25
+  testRunner.And("user select a random product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 14
- testRunner.And("user add the product to the chart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
+  testRunner.And("user add the product to the chart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 15
- testRunner.And("navigate to cart page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 27
+  testRunner.And("navigate to cart page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 16
- testRunner.And("click on checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 28
+  testRunner.And("click on checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 17
- testRunner.And("enter \"Eyüp Sabri\" first name and \"ALKAN\" last name and \"54100\" postal code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 29
+  testRunner.And("enter \"Eyüp Sabri\" first name and \"ALKAN\" last name and \"54100\" postal code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 18
- testRunner.Then("overview the purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 30
+  testRunner.Then("overview the purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 19
- testRunner.And("click on finish button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
+  testRunner.And("click on finish button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 20
- testRunner.Then("user should be in \"checkout-complete.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 32
+  testRunner.Then("user should be in \"checkout-complete.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

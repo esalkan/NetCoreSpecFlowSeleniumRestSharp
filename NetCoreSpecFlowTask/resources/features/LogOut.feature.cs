@@ -75,9 +75,9 @@ namespace NetCoreSpecFlowTask.Resources.Features
         
         public virtual void FeatureBackground()
         {
-#line 4
+#line 12
  #line hidden
-#line 5
+#line 13
   testRunner.Given("navigate to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
@@ -85,13 +85,17 @@ namespace NetCoreSpecFlowTask.Resources.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("User should be able logout")]
         [NUnit.Framework.CategoryAttribute("smoke")]
+        [NUnit.Framework.CategoryAttribute("logOut")]
+        [NUnit.Framework.CategoryAttribute("regression_1")]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", null)]
         [NUnit.Framework.TestCaseAttribute("problem_user", "secret_sauce", null)]
         [NUnit.Framework.TestCaseAttribute("performance_glitch_user", "secret_sauce", null)]
         public void UserShouldBeAbleLogout(string userName, string password, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "smoke"};
+                    "smoke",
+                    "logOut",
+                    "regression_1"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -101,7 +105,7 @@ namespace NetCoreSpecFlowTask.Resources.Features
             argumentsOfScenario.Add("UserName", userName);
             argumentsOfScenario.Add("Password", password);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User should be able logout", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 8
+#line 20
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -111,25 +115,25 @@ namespace NetCoreSpecFlowTask.Resources.Features
             else
             {
                 this.ScenarioStart();
-#line 4
+#line 12
  this.FeatureBackground();
 #line hidden
-#line 9
+#line 21
   testRunner.When(string.Format("enter {0} and {1} credentials", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 10
+#line 22
   testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 11
+#line 23
   testRunner.Then("user should be in \"inventory.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 12
+#line 24
   testRunner.When("click on hamburger menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 13
+#line 25
   testRunner.And("click on logout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 14
+#line 26
   testRunner.Then("user should be in login \"https://www.saucedemo.com/\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -139,13 +143,15 @@ namespace NetCoreSpecFlowTask.Resources.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify that after logout user can not reach the inventory page")]
         [NUnit.Framework.CategoryAttribute("smoke")]
+        [NUnit.Framework.CategoryAttribute("regression_1")]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "Epic sadface: You can only access \'/inventory.html\' when you are logged in.", null)]
         [NUnit.Framework.TestCaseAttribute("problem_user", "secret_sauce", "Epic sadface: You can only access \'/inventory.html\' when you are logged in.", null)]
         [NUnit.Framework.TestCaseAttribute("performance_glitch_user", "secret_sauce", "Epic sadface: You can only access \'/inventory.html\' when you are logged in.", null)]
         public void VerifyThatAfterLogoutUserCanNotReachTheInventoryPage(string userName, string password, string errorMessage, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "smoke"};
+                    "smoke",
+                    "regression_1"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -156,7 +162,7 @@ namespace NetCoreSpecFlowTask.Resources.Features
             argumentsOfScenario.Add("Password", password);
             argumentsOfScenario.Add("ErrorMessage", errorMessage);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify that after logout user can not reach the inventory page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 22
+#line 37
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -166,28 +172,28 @@ namespace NetCoreSpecFlowTask.Resources.Features
             else
             {
                 this.ScenarioStart();
-#line 4
+#line 12
  this.FeatureBackground();
 #line hidden
-#line 23
+#line 38
   testRunner.When(string.Format("enter {0} and {1} credentials", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 24
+#line 39
   testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 25
+#line 40
   testRunner.Then("user should be in \"inventory.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 26
+#line 41
   testRunner.When("click on hamburger menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 27
+#line 42
   testRunner.And("click on logout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 28
+#line 43
   testRunner.And("navigate back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 29
+#line 44
   testRunner.Then(string.Format("user should see {0} error message", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

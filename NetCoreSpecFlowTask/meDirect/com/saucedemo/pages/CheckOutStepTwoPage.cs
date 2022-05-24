@@ -1,7 +1,13 @@
-using NetCoreSpecFlowTask.com.meDirect.toolbox;
+using NetCoreSpecFlowTask.meDirect.com.saucedemo.toolbox;
 using OpenQA.Selenium;
-
-namespace NetCoreSpecFlowTask.com.meDirect.pages
+/*
+ * @author esalkan
+ * @vcard https://esalkan.com
+ * @project MeDirect - Skill Assessment
+ * @type Web & Api Automation 
+ * @repo https://github.com/esalkan/AutomationNetCoreSpecFlowSelenium.git
+ */
+namespace NetCoreSpecFlowTask.meDirect.com.saucedemo.pages
 {
     public class CheckOutStepTwoPage : BasePage
     {

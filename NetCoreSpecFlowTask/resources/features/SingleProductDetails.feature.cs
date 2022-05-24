@@ -75,9 +75,9 @@ namespace NetCoreSpecFlowTask.Resources.Features
         
         public virtual void FeatureBackground()
         {
-#line 4
+#line 12
  #line hidden
-#line 5
+#line 13
   testRunner.Given("navigate to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
@@ -86,19 +86,20 @@ namespace NetCoreSpecFlowTask.Resources.Features
             table6.AddRow(new string[] {
                         "standard_user",
                         "secret_sauce"});
-#line 6
+#line 14
   testRunner.When("enters valid credentials", ((string)(null)), table6, "When ");
 #line hidden
-#line 9
+#line 17
   testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 10
+#line 18
   testRunner.Then("user should be in \"inventory.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify that product details are right in single product page")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
         [NUnit.Framework.CategoryAttribute("regression_1")]
         [NUnit.Framework.TestCaseAttribute("Sauce Labs Backpack", "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromisi" +
             "ng style with unequaled laptop and tablet protection.", "29.99", null)]
@@ -118,6 +119,7 @@ namespace NetCoreSpecFlowTask.Resources.Features
         public void VerifyThatProductDetailsAreRightInSingleProductPage(string product, string description, string price, string[] exampleTags)
         {
             string[] @__tags = new string[] {
+                    "smoke",
                     "regression_1"};
             if ((exampleTags != null))
             {
@@ -129,7 +131,7 @@ namespace NetCoreSpecFlowTask.Resources.Features
             argumentsOfScenario.Add("Description", description);
             argumentsOfScenario.Add("Price", price);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify that product details are right in single product page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 13
+#line 24
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -139,13 +141,13 @@ namespace NetCoreSpecFlowTask.Resources.Features
             else
             {
                 this.ScenarioStart();
-#line 4
+#line 12
  this.FeatureBackground();
 #line hidden
-#line 14
+#line 25
   testRunner.And(string.Format("user navigate single product {0} page", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 15
+#line 26
   testRunner.Then(string.Format("verify {0} name and {1} description and {2} price", product, description, price), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

@@ -1,15 +1,17 @@
-
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using NetCoreSpecFlowTask.com.meDirect.pages;
-using NetCoreSpecFlowTask.com.meDirect.toolbox;
+using NetCoreSpecFlowTask.meDirect.com.saucedemo.pages;
 using NUnit.Framework;
-using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
-
-namespace NetCoreSpecFlowTask.com.meDirect.swagLabs.stepdefinitions
+/*
+ * @author esalkan
+ * @vcard https://esalkan.com
+ * @project MeDirect - Skill Assessment
+ * @type Web & Api Automation 
+ * @repo https://github.com/esalkan/AutomationNetCoreSpecFlowSelenium.git
+ */
+namespace NetCoreSpecFlowTask.meDirect.com.saucedemo.stepdefinitions
 {
     [Binding]
     public sealed class InventoryStepDefs

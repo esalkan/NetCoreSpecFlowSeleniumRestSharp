@@ -75,9 +75,9 @@ namespace NetCoreSpecFlowTask.Resources.Features
         
         public virtual void FeatureBackground()
         {
-#line 4
+#line 12
     #line hidden
-#line 5
+#line 13
         testRunner.Given("navigate to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -86,25 +86,29 @@ namespace NetCoreSpecFlowTask.Resources.Features
             table1.AddRow(new string[] {
                         "standard_user",
                         "secret_sauce"});
-#line 6
+#line 14
         testRunner.When("enters valid credentials", ((string)(null)), table1, "When ");
 #line hidden
-#line 9
+#line 17
         testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 10
+#line 18
         testRunner.Then("user should be in \"inventory.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Checkout Product")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
+        [NUnit.Framework.CategoryAttribute("regression_2")]
         public void CheckoutProduct()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "smoke",
+                    "regression_2"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Checkout Product", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 12
+#line 23
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -114,25 +118,25 @@ namespace NetCoreSpecFlowTask.Resources.Features
             else
             {
                 this.ScenarioStart();
-#line 4
+#line 12
     this.FeatureBackground();
 #line hidden
-#line 13
+#line 24
         testRunner.And("user select a random product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 14
+#line 25
         testRunner.And("user add the product to the chart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 15
+#line 26
         testRunner.And("navigate to cart page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 16
+#line 27
         testRunner.And("click on checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 17
+#line 28
         testRunner.And("enter \"Eyüp Sabri\" first name and \"ALKAN\" last name and \"54100\" postal code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 18
+#line 29
         testRunner.Then("user should be in \"checkout-step-one.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -141,12 +145,16 @@ namespace NetCoreSpecFlowTask.Resources.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Remove Item")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
+        [NUnit.Framework.CategoryAttribute("regression_2")]
         public void RemoveItem()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "smoke",
+                    "regression_2"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remove Item", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 20
+#line 34
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -156,22 +164,22 @@ namespace NetCoreSpecFlowTask.Resources.Features
             else
             {
                 this.ScenarioStart();
-#line 4
+#line 12
     this.FeatureBackground();
 #line hidden
-#line 21
+#line 35
         testRunner.And("user select a random product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 22
+#line 36
         testRunner.And("user add the product to the chart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 23
+#line 37
         testRunner.And("navigate to cart page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 24
+#line 38
         testRunner.When("user click remove the product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 25
+#line 39
         testRunner.Then("user should no longer see item in cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

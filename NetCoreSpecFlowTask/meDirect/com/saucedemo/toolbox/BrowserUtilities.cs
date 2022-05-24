@@ -1,8 +1,13 @@
-using System;
 using System.Collections.Generic;
 using OpenQA.Selenium;
-
-namespace NetCoreSpecFlowTask.com.meDirect.toolbox
+/*
+ * @author esalkan
+ * @vcard https://esalkan.com
+ * @project MeDirect - Skill Assessment
+ * @type Web & Api Automation 
+ * @repo https://github.com/esalkan/AutomationNetCoreSpecFlowSelenium.git
+ */
+namespace NetCoreSpecFlowTask.meDirect.com.saucedemo.toolbox
 {
     public class BrowserUtilities
     {

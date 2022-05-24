@@ -1,3 +1,9 @@
+# @author esalkan
+# @vcard https://esalkan.com
+# @project MeDirect - Skill Assessment
+# @type Web & Api Automation 
+# @repo https://github.com/esalkan/AutomationNetCoreSpecFlowSelenium.git
+
 Feature: Inventories
 	User Should be able to see the list of products in the inventory page
 

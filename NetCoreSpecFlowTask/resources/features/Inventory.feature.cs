@@ -35,7 +35,7 @@ namespace NetCoreSpecFlowTask.Resources.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "resources/features", "Inventories", "\tInventory welcome page should show products", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "resources/features", "Inventories", "\tUser Should be able to see the list of products in the inventory page", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,9 +75,9 @@ namespace NetCoreSpecFlowTask.Resources.Features
         
         public virtual void FeatureBackground()
         {
-#line 4
+#line 12
  #line hidden
-#line 5
+#line 13
   testRunner.Given("navigate to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -86,25 +86,29 @@ namespace NetCoreSpecFlowTask.Resources.Features
             table3.AddRow(new string[] {
                         "standard_user",
                         "secret_sauce"});
-#line 6
+#line 14
   testRunner.When("enters valid credentials", ((string)(null)), table3, "When ");
 #line hidden
-#line 9
+#line 17
   testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 10
+#line 18
   testRunner.Then("user should be in \"inventory.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify that user see products in inventory page")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
+        [NUnit.Framework.CategoryAttribute("regression_1")]
         public void VerifyThatUserSeeProductsInInventoryPage()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "smoke",
+                    "regression_1"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify that user see products in inventory page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 12
+#line 24
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -114,7 +118,7 @@ namespace NetCoreSpecFlowTask.Resources.Features
             else
             {
                 this.ScenarioStart();
-#line 4
+#line 12
  this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -131,7 +135,7 @@ namespace NetCoreSpecFlowTask.Resources.Features
                             "Sauce Labs Onesie"});
                 table4.AddRow(new string[] {
                             "Test.allTheThings() T-Shirt (Red)"});
-#line 13
+#line 25
   testRunner.Then("verify that user see following products on inventory page", ((string)(null)), table4, "Then ");
 #line hidden
             }

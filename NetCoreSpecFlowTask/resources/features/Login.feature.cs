@@ -76,9 +76,9 @@ namespace NetCoreSpecFlowTask.Resources.Features
         
         public virtual void FeatureBackground()
         {
-#line 4
+#line 10
  #line hidden
-#line 5
+#line 11
   testRunner.Given("navigate to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
@@ -86,13 +86,17 @@ namespace NetCoreSpecFlowTask.Resources.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Login feature with valid users credentials")]
         [NUnit.Framework.CategoryAttribute("smoke")]
+        [NUnit.Framework.CategoryAttribute("regression_1")]
+        [NUnit.Framework.CategoryAttribute("validLogin")]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", null)]
         [NUnit.Framework.TestCaseAttribute("problem_user", "secret_sauce", null)]
         [NUnit.Framework.TestCaseAttribute("performance_glitch_user", "secret_sauce", null)]
         public void LoginFeatureWithValidUsersCredentials(string userName, string password, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "smoke"};
+                    "smoke",
+                    "regression_1",
+                    "validLogin"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -102,7 +106,7 @@ namespace NetCoreSpecFlowTask.Resources.Features
             argumentsOfScenario.Add("UserName", userName);
             argumentsOfScenario.Add("Password", password);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login feature with valid users credentials", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 9
+#line 18
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -112,16 +116,16 @@ namespace NetCoreSpecFlowTask.Resources.Features
             else
             {
                 this.ScenarioStart();
-#line 4
+#line 10
  this.FeatureBackground();
 #line hidden
-#line 10
+#line 19
   testRunner.When(string.Format("enter {0} and {1} credentials", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 11
+#line 20
   testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 12
+#line 21
   testRunner.Then("user should be in \"inventory.html\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -131,6 +135,8 @@ namespace NetCoreSpecFlowTask.Resources.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Login feature with invalid users credentials")]
         [NUnit.Framework.CategoryAttribute("smoke")]
+        [NUnit.Framework.CategoryAttribute("regression_1")]
+        [NUnit.Framework.CategoryAttribute("invalidLogin")]
         [NUnit.Framework.TestCaseAttribute("standard_user", "", "Epic sadface: Password is required", null)]
         [NUnit.Framework.TestCaseAttribute("", "secret_sauce", "Epic sadface: Username is required", null)]
         [NUnit.Framework.TestCaseAttribute("standard_user", "random_pass", "Epic sadface: Username and password do not match any user in this service", null)]
@@ -140,7 +146,9 @@ namespace NetCoreSpecFlowTask.Resources.Features
         public void LoginFeatureWithInvalidUsersCredentials(string userName, string password, string errorMessage, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "smoke"};
+                    "smoke",
+                    "regression_1",
+                    "invalidLogin"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -151,7 +159,7 @@ namespace NetCoreSpecFlowTask.Resources.Features
             argumentsOfScenario.Add("Password", password);
             argumentsOfScenario.Add("ErrorMessage", errorMessage);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login feature with invalid users credentials", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 21
+#line 33
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -161,16 +169,16 @@ namespace NetCoreSpecFlowTask.Resources.Features
             else
             {
                 this.ScenarioStart();
-#line 4
+#line 10
  this.FeatureBackground();
 #line hidden
-#line 22
+#line 34
   testRunner.When(string.Format("enter {0} and {1} credentials", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 23
+#line 35
   testRunner.And("click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 24
+#line 36
   testRunner.Then(string.Format("user should see {0} error message", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

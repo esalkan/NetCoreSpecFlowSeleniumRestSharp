@@ -1,9 +1,15 @@
-using NetCoreSpecFlowTask.com.meDirect.pages;
-using NetCoreSpecFlowTask.com.meDirect.toolbox;
+using NetCoreSpecFlowTask.meDirect.com.saucedemo.pages;
+using NetCoreSpecFlowTask.meDirect.com.saucedemo.toolbox;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
-
-namespace NetCoreSpecFlowTask.com.meDirect.stepdefinitions
+/*
+ * @author esalkan
+ * @vcard https://esalkan.com
+ * @project MeDirect - Skill Assessment
+ * @type Web & Api Automation 
+ * @repo https://github.com/esalkan/AutomationNetCoreSpecFlowSelenium.git
+ */
+namespace NetCoreSpecFlowTask.meDirect.com.saucedemo.stepdefinitions
 {   // This class is used to define the steps for the feature file
     [Binding]
     public sealed class LogOutStepDefs

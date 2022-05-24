@@ -1,15 +1,19 @@
 using System;
-using System.Reflection;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
-using Gherkin.Ast;
-using NetCoreSpecFlowTask.com.meDirect.toolbox;
+using NetCoreSpecFlowTask.meDirect.com.saucedemo.toolbox;
 using TechTalk.SpecFlow;
 using Feature = AventStack.ExtentReports.Gherkin.Model.Feature;
 using Scenario = AventStack.ExtentReports.Gherkin.Model.Scenario;
-
-namespace NetCoreSpecFlowTask.com.meDirect.stepdefinitions
+/*
+ * @author esalkan
+ * @vcard https://esalkan.com
+ * @project MeDirect - Skill Assessment
+ * @type Web & Api Automation 
+ * @repo https://github.com/esalkan/AutomationNetCoreSpecFlowSelenium.git
+ */
+namespace NetCoreSpecFlowTask.meDirect.com.saucedemo.stepdefinitions
 {
     [Binding]
     public sealed class Hooks

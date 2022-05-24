@@ -1,3 +1,9 @@
+# @author esalkan
+# @vcard https://esalkan.com
+# @project MeDirect - Skill Assessment
+# @type Web & Api Automation 
+# @repo https://github.com/esalkan/AutomationNetCoreSpecFlowSelenium.git
+
 Feature: Purchase
 	User should be able to make a purchase successfully
 

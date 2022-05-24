@@ -1,3 +1,9 @@
+# @author esalkan
+# @vcard https://esalkan.com
+# @project MeDirect - Skill Assessment
+# @type Web & Api Automation 
+# @repo https://github.com/esalkan/AutomationNetCoreSpecFlowSelenium.git
+
 Feature: Login Feature
 	User should be able to login with valid credentials and user should not be able to login with invalid credentialsß
 

@@ -1,12 +1,15 @@
-using AventStack.ExtentReports;
-using AventStack.ExtentReports.Gherkin.Model;
-using AventStack.ExtentReports.Reporter;
-using NetCoreSpecFlowTask.com.meDirect.pages;
-using NetCoreSpecFlowTask.com.meDirect.toolbox;
+using NetCoreSpecFlowTask.meDirect.com.saucedemo.pages;
+using NetCoreSpecFlowTask.meDirect.com.saucedemo.toolbox;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
-
-namespace NetCoreSpecFlowTask.com.meDirect.stepdefinitions
+/*
+ * @author esalkan
+ * @vcard https://esalkan.com
+ * @project MeDirect - Skill Assessment
+ * @type Web & Api Automation 
+ * @repo https://github.com/esalkan/AutomationNetCoreSpecFlowSelenium.git
+ */
+namespace NetCoreSpecFlowTask.meDirect.com.saucedemo.stepdefinitions
 {
     
     [Binding] // Binds the steps to the class
