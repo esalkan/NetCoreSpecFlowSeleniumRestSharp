@@ -43,7 +43,7 @@
         <ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 
             <a>
-                <span class='suite-start-time label blue darken-3'>5/24/2022 12:43:52 PM +03</span>
+                <span class='suite-start-time label blue darken-3'>5/24/2022 4:24:25 PM +03</span>
             </a>
             <a>
                 <span class="label blue darken-3">3.1.0</span>
@@ -123,7 +123,7 @@
                     <canvas id='parent-analysis' width='100' height='80'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span><span class='strong'>1</span> test(s) passed</span>
+                    <span><span class='strong'>7</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong'>0</span> test(s) failed, <span class='strong'>0</span> others
@@ -138,7 +138,7 @@
                         <canvas id='child-analysis' width='100' height='80'></canvas>
                     </div>
                     <div class='block text-small'>
-                        <span><span class='strong'>7</span> step(s) passed</span>
+                        <span><span class='strong'>29</span> step(s) passed</span>
                     </div>
                     <div class='block text-small'>
                         <span class='strong'>0</span> step(s) failed, <span class='strong'>0</span> others
@@ -153,7 +153,7 @@
                         <canvas id='grandchild-analysis' width='100' height='80'></canvas>
                     </div>
                     <div class='block text-small'>
-                        <span><span class='strong'>42</span> step(s) passed</span>
+                        <span><span class='strong'>195</span> step(s) passed</span>
                     </div>
                     <div class='block text-small'>
                         <span class='strong'>0</span> step(s) failed, <span class='strong'>0</span> others
@@ -172,16 +172,16 @@
 
                     <li class='test displayed active has-leaf pass' status='pass' bdd='bdd' test-id='1'>
                         <div class='test-heading'>
-                            <span class='test-name'>SingleProductDetails</span>
-                            <span class='test-time'>5/24/2022 12:43:52 PM</span>
+                            <span class='test-name'>Cart</span>
+                            <span class='test-time'>5/24/2022 4:24:25 PM</span>
                             <span class='test-status right pass'>Pass</span>
                         </div>
                         <div class='test-content hide'>
                                     <div class='scenario node' test-id='2' status='pass'>
-                                        <span class='scenario-duration right label'>00:00:01.9492400</span>
+                                        <span class='scenario-duration right label'>00:00:02.7689010</span>
                                         <div class='scenario-desc'>
                                             <b>Scenario</b>
-                                            Verify that product details are right in single product page
+                                            Checkout Product
 
                                             
                                         </div>
@@ -204,16 +204,930 @@
                                                                                                                                                                     </li>
                                                     <li test-id='7' class='node then pass' status='then pass'>
                                                         <b>Then</b>
-                                                        user navigate single product Sauce Labs Backpack page
+                                                        user select a random product
                                                                                                                                                                     </li>
                                                     <li test-id='8' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user add the product to the chart
+                                                                                                                                                                    </li>
+                                                    <li test-id='9' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        navigate to cart page
+                                                                                                                                                                    </li>
+                                                    <li test-id='10' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        click on checkout button
+                                                                                                                                                                    </li>
+                                                    <li test-id='11' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        enter "Eyüp Sabri" first name and "ALKAN" last name and "54100" postal code
+                                                                                                                                                                    </li>
+                                                    <li test-id='12' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "checkout-step-one.html" page
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='13' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.7959410</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Remove Item
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='14' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='15' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enters valid credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='16' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='17' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='18' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user select a random product
+                                                                                                                                                                    </li>
+                                                    <li test-id='19' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user add the product to the chart
+                                                                                                                                                                    </li>
+                                                    <li test-id='20' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        navigate to cart page
+                                                                                                                                                                    </li>
+                                                    <li test-id='21' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        user click remove the product
+                                                                                                                                                                    </li>
+                                                    <li test-id='22' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should no longer see item in cart
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+
+                        </div>
+                    </li>
+                    <li class='test displayed active has-leaf pass' status='pass' bdd='bdd' test-id='23'>
+                        <div class='test-heading'>
+                            <span class='test-name'>Checkout Feature</span>
+                            <span class='test-time'>5/24/2022 4:24:35 PM</span>
+                            <span class='test-status right pass'>Pass</span>
+                        </div>
+                        <div class='test-content hide'>
+                                    <div class='scenario node' test-id='24' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:02.0065720</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            All Fields Empty Error Message
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='25' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='26' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enters valid credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='27' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='28' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='29' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user select a random product
+                                                                                                                                                                    </li>
+                                                    <li test-id='30' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user add the product to the chart
+                                                                                                                                                                    </li>
+                                                    <li test-id='31' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        navigate to cart page
+                                                                                                                                                                    </li>
+                                                    <li test-id='32' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        click on checkout button
+                                                                                                                                                                    </li>
+                                                    <li test-id='33' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "checkout-step-one.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='34' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        click on continue button
+                                                                                                                                                                    </li>
+                                                    <li test-id='35' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should see the error message "Error: First Name is required"
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='36' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.9769710</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Last Name Error Message
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='37' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='38' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enters valid credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='39' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='40' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='41' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user select a random product
+                                                                                                                                                                    </li>
+                                                    <li test-id='42' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user add the product to the chart
+                                                                                                                                                                    </li>
+                                                    <li test-id='43' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        navigate to cart page
+                                                                                                                                                                    </li>
+                                                    <li test-id='44' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        click on checkout button
+                                                                                                                                                                    </li>
+                                                    <li test-id='45' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "checkout-step-one.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='46' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        enter first name "Eyüp Sabri"
+                                                                                                                                                                    </li>
+                                                    <li test-id='47' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        click on continue button
+                                                                                                                                                                    </li>
+                                                    <li test-id='48' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should see the error message "Error: Last Name is required"
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='49' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:02.0078280</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Postal Code Error Message
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='50' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='51' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enters valid credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='52' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='53' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='54' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user select a random product
+                                                                                                                                                                    </li>
+                                                    <li test-id='55' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user add the product to the chart
+                                                                                                                                                                    </li>
+                                                    <li test-id='56' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        navigate to cart page
+                                                                                                                                                                    </li>
+                                                    <li test-id='57' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        click on checkout button
+                                                                                                                                                                    </li>
+                                                    <li test-id='58' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "checkout-step-one.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='59' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        enter first name "Eyüp Sabri"
+                                                                                                                                                                    </li>
+                                                    <li test-id='60' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        enter last name "ALKAN"
+                                                                                                                                                                    </li>
+                                                    <li test-id='61' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        click on continue button
+                                                                                                                                                                    </li>
+                                                    <li test-id='62' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should see the error message "Error: Postal Code is required"
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+
+                        </div>
+                    </li>
+                    <li class='test displayed active has-leaf pass' status='pass' bdd='bdd' test-id='63'>
+                        <div class='test-heading'>
+                            <span class='test-name'>Inventories</span>
+                            <span class='test-time'>5/24/2022 4:24:46 PM</span>
+                            <span class='test-status right pass'>Pass</span>
+                        </div>
+                        <div class='test-content hide'>
+                                    <div class='scenario node' test-id='64' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.4378520</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Verify that user see products in inventory page
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='65' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='66' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enters valid credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='67' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='68' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='69' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        verify that user see following products on inventory page
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+
+                        </div>
+                    </li>
+                    <li class='test displayed active has-leaf pass' status='pass' bdd='bdd' test-id='70'>
+                        <div class='test-heading'>
+                            <span class='test-name'>Login Feature</span>
+                            <span class='test-time'>5/24/2022 4:24:49 PM</span>
+                            <span class='test-status right pass'>Pass</span>
+                        </div>
+                        <div class='test-content hide'>
+                                    <div class='scenario node' test-id='71' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.2823620</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Login feature with invalid users credentials
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='72' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='73' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enter standard_user and  credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='74' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='75' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should see Epic sadface: Password is required error message
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='76' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:02.2229330</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Login feature with invalid users credentials
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='77' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='78' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enter  and secret_sauce credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='79' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='80' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should see Epic sadface: Username is required error message
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='81' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:02.1982570</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Login feature with invalid users credentials
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='82' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='83' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enter standard_user and random_pass credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='84' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='85' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should see Epic sadface: Username and password do not match any user in this service error message
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='86' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.2200910</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Login feature with invalid users credentials
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='87' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='88' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enter problem_user and random_pass credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='89' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='90' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should see Epic sadface: Username and password do not match any user in this service error message
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='91' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.1575600</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Login feature with invalid users credentials
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='92' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='93' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enter performance_glitch_user and random_pass credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='94' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='95' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should see Epic sadface: Username and password do not match any user in this service error message
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='96' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.2244990</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Login feature with invalid users credentials
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='97' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='98' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enter  and  credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='99' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='100' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should see Epic sadface: Username is required error message
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='101' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.2327210</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Login feature with valid users credentials
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='102' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='103' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enter standard_user and secret_sauce credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='104' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='105' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='106' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.2790020</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Login feature with valid users credentials
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='107' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='108' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enter problem_user and secret_sauce credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='109' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='110' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='111' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:06.1534630</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Login feature with valid users credentials
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='112' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='113' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enter performance_glitch_user and secret_sauce credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='114' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='115' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+
+                        </div>
+                    </li>
+                    <li class='test displayed active has-leaf pass' status='pass' bdd='bdd' test-id='116'>
+                        <div class='test-heading'>
+                            <span class='test-name'>LogOut Feature</span>
+                            <span class='test-time'>5/24/2022 4:25:22 PM</span>
+                            <span class='test-status right pass'>Pass</span>
+                        </div>
+                        <div class='test-content hide'>
+                                    <div class='scenario node' test-id='117' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.5889020</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            User should be able logout
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='118' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='119' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enter standard_user and secret_sauce credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='120' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='121' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='122' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on hamburger menu
+                                                                                                                                                                    </li>
+                                                    <li test-id='123' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on logout button
+                                                                                                                                                                    </li>
+                                                    <li test-id='124' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in login "https://www.saucedemo.com/" page
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='125' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.4958430</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            User should be able logout
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='126' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='127' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enter problem_user and secret_sauce credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='128' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='129' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='130' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on hamburger menu
+                                                                                                                                                                    </li>
+                                                    <li test-id='131' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on logout button
+                                                                                                                                                                    </li>
+                                                    <li test-id='132' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in login "https://www.saucedemo.com/" page
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='133' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:06.4857580</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            User should be able logout
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='134' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='135' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enter performance_glitch_user and secret_sauce credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='136' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='137' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='138' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on hamburger menu
+                                                                                                                                                                    </li>
+                                                    <li test-id='139' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on logout button
+                                                                                                                                                                    </li>
+                                                    <li test-id='140' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in login "https://www.saucedemo.com/" page
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='141' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.6021720</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Verify that after logout user can not reach the inventory page
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='142' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='143' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enter standard_user and secret_sauce credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='144' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='145' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='146' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on hamburger menu
+                                                                                                                                                                    </li>
+                                                    <li test-id='147' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on logout button
+                                                                                                                                                                    </li>
+                                                    <li test-id='148' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        navigate back
+                                                                                                                                                                    </li>
+                                                    <li test-id='149' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should see Epic sadface: You can only access '/inventory.html' when you are logged in. error message
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='150' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.8076780</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Verify that after logout user can not reach the inventory page
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='151' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='152' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enter problem_user and secret_sauce credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='153' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='154' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='155' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on hamburger menu
+                                                                                                                                                                    </li>
+                                                    <li test-id='156' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on logout button
+                                                                                                                                                                    </li>
+                                                    <li test-id='157' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        navigate back
+                                                                                                                                                                    </li>
+                                                    <li test-id='158' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should see Epic sadface: You can only access '/inventory.html' when you are logged in. error message
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div class='scenario node' test-id='159' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:06.6827160</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Verify that after logout user can not reach the inventory page
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='160' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='161' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enter performance_glitch_user and secret_sauce credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='162' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='163' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='164' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on hamburger menu
+                                                                                                                                                                    </li>
+                                                    <li test-id='165' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on logout button
+                                                                                                                                                                    </li>
+                                                    <li test-id='166' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        navigate back
+                                                                                                                                                                    </li>
+                                                    <li test-id='167' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should see Epic sadface: You can only access '/inventory.html' when you are logged in. error message
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+
+                        </div>
+                    </li>
+                    <li class='test displayed active has-leaf pass' status='pass' bdd='bdd' test-id='168'>
+                        <div class='test-heading'>
+                            <span class='test-name'>Purchase</span>
+                            <span class='test-time'>5/24/2022 4:25:52 PM</span>
+                            <span class='test-status right pass'>Pass</span>
+                        </div>
+                        <div class='test-content hide'>
+                                    <div class='scenario node' test-id='169' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.8743660</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Verify that user can buy a product
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='170' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='171' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enters valid credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='172' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='173' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='174' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user select a random product
+                                                                                                                                                                    </li>
+                                                    <li test-id='175' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user add the product to the chart
+                                                                                                                                                                    </li>
+                                                    <li test-id='176' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        navigate to cart page
+                                                                                                                                                                    </li>
+                                                    <li test-id='177' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        click on checkout button
+                                                                                                                                                                    </li>
+                                                    <li test-id='178' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        enter "Eyüp Sabri" first name and "ALKAN" last name and "54100" postal code
+                                                                                                                                                                    </li>
+                                                    <li test-id='179' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        overview the purchase
+                                                                                                                                                                    </li>
+                                                    <li test-id='180' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        click on finish button
+                                                                                                                                                                    </li>
+                                                    <li test-id='181' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "checkout-complete.html" page
+                                                                                                                                                                    </li>
+                                            </ul>
+                                    </div>
+
+                        </div>
+                    </li>
+                    <li class='test displayed active has-leaf pass' status='pass' bdd='bdd' test-id='182'>
+                        <div class='test-heading'>
+                            <span class='test-name'>SingleProductDetails</span>
+                            <span class='test-time'>5/24/2022 4:25:55 PM</span>
+                            <span class='test-status right pass'>Pass</span>
+                        </div>
+                        <div class='test-content hide'>
+                                    <div class='scenario node' test-id='183' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.3992520</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Verify that product details are right in single product page
+
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='184' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        navigate to the login page
+                                                                                                                                                                    </li>
+                                                    <li test-id='185' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        enters valid credentials
+                                                                                                                                                                    </li>
+                                                    <li test-id='186' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        click on login button
+                                                                                                                                                                    </li>
+                                                    <li test-id='187' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user should be in "inventory.html" page
+                                                                                                                                                                    </li>
+                                                    <li test-id='188' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        user navigate single product Sauce Labs Backpack page
+                                                                                                                                                                    </li>
+                                                    <li test-id='189' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         verify Sauce Labs Backpack name and carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection. description and 29.99 price
                                                                                                                                                                     </li>
                                             </ul>
                                     </div>
-                                    <div class='scenario node' test-id='9' status='pass'>
-                                        <span class='scenario-duration right label'>00:00:01.7108960</span>
+                                    <div class='scenario node' test-id='190' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.5644690</span>
                                         <div class='scenario-desc'>
                                             <b>Scenario</b>
                                             Verify that product details are right in single product page
@@ -221,34 +1135,34 @@
                                             
                                         </div>
                                             <ul class='steps'>
-                                                    <li test-id='10' class='node given pass' status='given pass'>
+                                                    <li test-id='191' class='node given pass' status='given pass'>
                                                         <b>Given</b>
                                                         navigate to the login page
                                                                                                                                                                     </li>
-                                                    <li test-id='11' class='node when pass' status='when pass'>
+                                                    <li test-id='192' class='node when pass' status='when pass'>
                                                         <b>When</b>
                                                         enters valid credentials
                                                                                                                                                                     </li>
-                                                    <li test-id='12' class='node when pass' status='when pass'>
+                                                    <li test-id='193' class='node when pass' status='when pass'>
                                                         <b>When</b>
                                                         click on login button
                                                                                                                                                                     </li>
-                                                    <li test-id='13' class='node then pass' status='then pass'>
+                                                    <li test-id='194' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         user should be in "inventory.html" page
                                                                                                                                                                     </li>
-                                                    <li test-id='14' class='node then pass' status='then pass'>
+                                                    <li test-id='195' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         user navigate single product Sauce Labs Bike Light page
                                                                                                                                                                     </li>
-                                                    <li test-id='15' class='node then pass' status='then pass'>
+                                                    <li test-id='196' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         verify Sauce Labs Bike Light name and A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included. description and 9.99 price
                                                                                                                                                                     </li>
                                             </ul>
                                     </div>
-                                    <div class='scenario node' test-id='16' status='pass'>
-                                        <span class='scenario-duration right label'>00:00:01.5739150</span>
+                                    <div class='scenario node' test-id='197' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.4153930</span>
                                         <div class='scenario-desc'>
                                             <b>Scenario</b>
                                             Verify that product details are right in single product page
@@ -256,34 +1170,34 @@
                                             
                                         </div>
                                             <ul class='steps'>
-                                                    <li test-id='17' class='node given pass' status='given pass'>
+                                                    <li test-id='198' class='node given pass' status='given pass'>
                                                         <b>Given</b>
                                                         navigate to the login page
                                                                                                                                                                     </li>
-                                                    <li test-id='18' class='node when pass' status='when pass'>
+                                                    <li test-id='199' class='node when pass' status='when pass'>
                                                         <b>When</b>
                                                         enters valid credentials
                                                                                                                                                                     </li>
-                                                    <li test-id='19' class='node when pass' status='when pass'>
+                                                    <li test-id='200' class='node when pass' status='when pass'>
                                                         <b>When</b>
                                                         click on login button
                                                                                                                                                                     </li>
-                                                    <li test-id='20' class='node then pass' status='then pass'>
+                                                    <li test-id='201' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         user should be in "inventory.html" page
                                                                                                                                                                     </li>
-                                                    <li test-id='21' class='node then pass' status='then pass'>
+                                                    <li test-id='202' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         user navigate single product Sauce Labs Bolt T-Shirt page
                                                                                                                                                                     </li>
-                                                    <li test-id='22' class='node then pass' status='then pass'>
+                                                    <li test-id='203' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         verify Sauce Labs Bolt T-Shirt name and Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt. description and 15.99 price
                                                                                                                                                                     </li>
                                             </ul>
                                     </div>
-                                    <div class='scenario node' test-id='23' status='pass'>
-                                        <span class='scenario-duration right label'>00:00:01.7682330</span>
+                                    <div class='scenario node' test-id='204' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.3195620</span>
                                         <div class='scenario-desc'>
                                             <b>Scenario</b>
                                             Verify that product details are right in single product page
@@ -291,34 +1205,34 @@
                                             
                                         </div>
                                             <ul class='steps'>
-                                                    <li test-id='24' class='node given pass' status='given pass'>
+                                                    <li test-id='205' class='node given pass' status='given pass'>
                                                         <b>Given</b>
                                                         navigate to the login page
                                                                                                                                                                     </li>
-                                                    <li test-id='25' class='node when pass' status='when pass'>
+                                                    <li test-id='206' class='node when pass' status='when pass'>
                                                         <b>When</b>
                                                         enters valid credentials
                                                                                                                                                                     </li>
-                                                    <li test-id='26' class='node when pass' status='when pass'>
+                                                    <li test-id='207' class='node when pass' status='when pass'>
                                                         <b>When</b>
                                                         click on login button
                                                                                                                                                                     </li>
-                                                    <li test-id='27' class='node then pass' status='then pass'>
+                                                    <li test-id='208' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         user should be in "inventory.html" page
                                                                                                                                                                     </li>
-                                                    <li test-id='28' class='node then pass' status='then pass'>
+                                                    <li test-id='209' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         user navigate single product Sauce Labs Bolt T-Shirt page
                                                                                                                                                                     </li>
-                                                    <li test-id='29' class='node then pass' status='then pass'>
+                                                    <li test-id='210' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         verify Sauce Labs Bolt T-Shirt name and Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt. description and 15.99 price
                                                                                                                                                                     </li>
                                             </ul>
                                     </div>
-                                    <div class='scenario node' test-id='30' status='pass'>
-                                        <span class='scenario-duration right label'>00:00:01.7101450</span>
+                                    <div class='scenario node' test-id='211' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:02.3521410</span>
                                         <div class='scenario-desc'>
                                             <b>Scenario</b>
                                             Verify that product details are right in single product page
@@ -326,34 +1240,34 @@
                                             
                                         </div>
                                             <ul class='steps'>
-                                                    <li test-id='31' class='node given pass' status='given pass'>
+                                                    <li test-id='212' class='node given pass' status='given pass'>
                                                         <b>Given</b>
                                                         navigate to the login page
                                                                                                                                                                     </li>
-                                                    <li test-id='32' class='node when pass' status='when pass'>
+                                                    <li test-id='213' class='node when pass' status='when pass'>
                                                         <b>When</b>
                                                         enters valid credentials
                                                                                                                                                                     </li>
-                                                    <li test-id='33' class='node when pass' status='when pass'>
+                                                    <li test-id='214' class='node when pass' status='when pass'>
                                                         <b>When</b>
                                                         click on login button
                                                                                                                                                                     </li>
-                                                    <li test-id='34' class='node then pass' status='then pass'>
+                                                    <li test-id='215' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         user should be in "inventory.html" page
                                                                                                                                                                     </li>
-                                                    <li test-id='35' class='node then pass' status='then pass'>
+                                                    <li test-id='216' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         user navigate single product Sauce Labs Fleece Jacket page
                                                                                                                                                                     </li>
-                                                    <li test-id='36' class='node then pass' status='then pass'>
+                                                    <li test-id='217' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         verify Sauce Labs Fleece Jacket name and It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office. description and 49.99 price
                                                                                                                                                                     </li>
                                             </ul>
                                     </div>
-                                    <div class='scenario node' test-id='37' status='pass'>
-                                        <span class='scenario-duration right label'>00:00:01.6579950</span>
+                                    <div class='scenario node' test-id='218' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.3928420</span>
                                         <div class='scenario-desc'>
                                             <b>Scenario</b>
                                             Verify that product details are right in single product page
@@ -361,34 +1275,34 @@
                                             
                                         </div>
                                             <ul class='steps'>
-                                                    <li test-id='38' class='node given pass' status='given pass'>
+                                                    <li test-id='219' class='node given pass' status='given pass'>
                                                         <b>Given</b>
                                                         navigate to the login page
                                                                                                                                                                     </li>
-                                                    <li test-id='39' class='node when pass' status='when pass'>
+                                                    <li test-id='220' class='node when pass' status='when pass'>
                                                         <b>When</b>
                                                         enters valid credentials
                                                                                                                                                                     </li>
-                                                    <li test-id='40' class='node when pass' status='when pass'>
+                                                    <li test-id='221' class='node when pass' status='when pass'>
                                                         <b>When</b>
                                                         click on login button
                                                                                                                                                                     </li>
-                                                    <li test-id='41' class='node then pass' status='then pass'>
+                                                    <li test-id='222' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         user should be in "inventory.html" page
                                                                                                                                                                     </li>
-                                                    <li test-id='42' class='node then pass' status='then pass'>
+                                                    <li test-id='223' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         user navigate single product Sauce Labs Onesie page
                                                                                                                                                                     </li>
-                                                    <li test-id='43' class='node then pass' status='then pass'>
+                                                    <li test-id='224' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         verify Sauce Labs Onesie name and Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel. description and 7.99 price
                                                                                                                                                                     </li>
                                             </ul>
                                     </div>
-                                    <div class='scenario node' test-id='44' status='pass'>
-                                        <span class='scenario-duration right label'>00:00:01.6841270</span>
+                                    <div class='scenario node' test-id='225' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.4467030</span>
                                         <div class='scenario-desc'>
                                             <b>Scenario</b>
                                             Verify that product details are right in single product page
@@ -396,27 +1310,27 @@
                                             
                                         </div>
                                             <ul class='steps'>
-                                                    <li test-id='45' class='node given pass' status='given pass'>
+                                                    <li test-id='226' class='node given pass' status='given pass'>
                                                         <b>Given</b>
                                                         navigate to the login page
                                                                                                                                                                     </li>
-                                                    <li test-id='46' class='node when pass' status='when pass'>
+                                                    <li test-id='227' class='node when pass' status='when pass'>
                                                         <b>When</b>
                                                         enters valid credentials
                                                                                                                                                                     </li>
-                                                    <li test-id='47' class='node when pass' status='when pass'>
+                                                    <li test-id='228' class='node when pass' status='when pass'>
                                                         <b>When</b>
                                                         click on login button
                                                                                                                                                                     </li>
-                                                    <li test-id='48' class='node then pass' status='then pass'>
+                                                    <li test-id='229' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         user should be in "inventory.html" page
                                                                                                                                                                     </li>
-                                                    <li test-id='49' class='node then pass' status='then pass'>
+                                                    <li test-id='230' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         user navigate single product Test.allTheThings() T-Shirt (Red) page
                                                                                                                                                                     </li>
-                                                    <li test-id='50' class='node then pass' status='then pass'>
+                                                    <li test-id='231' class='node then pass' status='then pass'>
                                                         <b>Then</b>
                                                         verify Test.allTheThings() T-Shirt (Red) name and This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton. description and 15.99 price
                                                                                                                                                                     </li>
@@ -489,36 +1403,36 @@
         <div class='row'>
             <div class='col s2'>
                 <div class='card-panel r'>
- <span>Features</span>                     <div class='panel-lead'>1</div>
+ <span>Features</span>                     <div class='panel-lead'>7</div>
                 </div>
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
- <span>Scenarios</span>                     <div class='panel-lead'>7</div>
+ <span>Scenarios</span>                     <div class='panel-lead'>29</div>
                 </div>
             </div>
                 <div class='col s2'>
                     <div class='card-panel r'>
                         Steps
-                        <div class='panel-lead'>42</div>
+                        <div class='panel-lead'>195</div>
                     </div>
                 </div>
             <div class='col s2'>
                 <div class='card-panel r'>
                     Start
-                    <div class='panel-lead'>5/24/2022 12:43:52 PM</div>
+                    <div class='panel-lead'>5/24/2022 4:24:25 PM</div>
                 </div>
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
                     End
-                    <div class='panel-lead'>5/24/2022 12:44:21 PM</div>
+                    <div class='panel-lead'>5/24/2022 4:26:21 PM</div>
                 </div>
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
                     Time Taken
-                    <div class='panel-lead'>00:00:29.4499060</div>
+                    <div class='panel-lead'>00:01:56.3723190</div>
                 </div>
             </div>
 
@@ -537,14 +1451,14 @@
 
 		<script>
 			var statusGroup = {
-			    passParent: 1,
+			    passParent: 7,
 			    failParent: 0,
 			    fatalParent: 0,
 			    errorParent: 0,
 			    warningParent: 0,
 			    skipParent: 0,
 				
-			    passChild: 7,
+			    passChild: 29,
 			    failChild: 0,
 			    fatalChild: 0,
 			    errorChild: 0,
@@ -552,7 +1466,7 @@
 			    skipChild: 0,
 			    infoChild: 0,
 				
-			    passGrandChild: 42,
+			    passGrandChild: 195,
 			    failGrandChild: 0,
 			    fatalGrandChild: 0,
 			    errorGrandChild: 0,
